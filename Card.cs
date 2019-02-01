@@ -1,24 +1,28 @@
 namespace scallywags
 {
-  public class Card
-  {
-    private string title = "Card1";
-    private string desc = "This is a card";
-
-    public Card(string Title, string Description)
+    public class Card
     {
-      title = Title;
-      desc = Description;
-    }
+        private string title = "Card1";
+        private string desc = "This is a card";
+        private int cardPower;
+        private string cardType;
 
-    public string Title()
-    {
-      return title;
-    }
+        public Card(string Title, string Description, int CardPower, string CardType)
+        {
+            title = Title;
+            desc = Description;
+            cardPower = CardPower;
+            cardType = CardType;
+        }
 
-    public string Description()
-    {
-      return desc;
+        public string Title()
+        {
+            return title;
+        }
+
+        public string Description()
+        {
+            return desc;
+        }
     }
-  }
 }
