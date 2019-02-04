@@ -20,7 +20,7 @@ namespace scallywags
         if (c != null)
         {
           Hand.Add(c);
-          Console.WriteLine($"Hand Size: {Hand.Count}; Card Drawn: {c.Title()}");
+          Console.WriteLine($"Hand Size: {Hand.Count}; Card Drawn: {c.Title()}; System: {c.CardType()}; Description: {c.Description()} {c.CardPower()};");
         }
         else
         {

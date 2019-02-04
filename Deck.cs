@@ -10,6 +10,7 @@ namespace scallywags
         public int currentSize;
         public List<string> names;
         public List<string> descriptions;
+        public List<string> systems;
         private static Random rnd = new Random();
 
         public Deck(int maxSize = 10)
@@ -17,8 +18,8 @@ namespace scallywags
             size = maxSize;
             currentSize = maxSize;
             names = new List<string> { "Eyepatch", "Peg Leg", "Rifled Cannons", "Jolly Roger" };
-            descriptions = new List<string> { "Speed +1", "Targeting +1", "Ship Power +1", "Ship Power +5" };
-            systems = new List<strings> { "Crew", "Crew", "Armament", "Rigging", };
+            descriptions = new List<string> { "Speed +", "Targeting +", "Ship Power +", "Ship Power +" };
+            systems = new List<string> { "Crew", "Crew", "Armament", "Rigging", };
         }
 
         public Card DrawCard(int cardsToDraw = 1)
@@ -29,7 +30,7 @@ namespace scallywags
                 int r = rnd.Next(names.Count);
                 int cardPower = (rnd.Next(4) + 1);
                 currentSize--;
-                return new Card(names[r], descriptions[r], systems[r]);
+                return new Card(names[r], descriptions[r],cardPower, systems[r]);
             }
             else
             {

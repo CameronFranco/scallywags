@@ -24,5 +24,14 @@ namespace scallywags
         {
             return desc;
         }
+
+         public int CardPower()
+        {
+            return cardPower;
+        }
+         public string CardType()
+        {
+            return cardType;
+        }
     }
 }
